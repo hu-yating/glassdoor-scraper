@@ -1,0 +1,4 @@
+ls and cd
+python main.py
+
+in the data/config file modify the desired url and number of instances to scrape

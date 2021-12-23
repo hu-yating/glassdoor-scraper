@@ -27,8 +27,21 @@ def extract_maximums(base_url):
 
     maxJobs = re.sub(r"\D", "", maxJobs_raw)
     maxPages = re.sub(r"\D", "", maxPages_raw)[1:]
+
+    print(maxJobs)
+    print(type(maxJobs))
+
+    print(maxPages)
+    print(type(maxPages))
+
+    try:
+        lhs = int(float(maxJobs))
+        rhs = int(float(maxPages))
+    except ValueError:
+        rhs = ''
+        pass
     
-    return(int(maxJobs), int(maxPages))
+    return(lhs, rhs)
 
 
 # extract listing urls
